@@ -119,7 +119,7 @@ body {
     font-weight: bold;
 }
 
-/* Status Bar */
+
 .status-bar {
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
@@ -173,7 +173,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Panel Styles */
+
 .panel {
     background: rgba(255,255,255,0.95);
     border-radius: 15px;
@@ -202,7 +202,7 @@ body {
     margin: 0;
 }
 
-/* Auth Section */
+
 .auth-section {
     padding: 20px;
 }
@@ -279,7 +279,7 @@ select:focus, input:focus {
     margin-top: 5px;
 }
 
-/* User Info Card */
+
 .user-info {
     background: linear-gradient(135deg, #667eea, #764ba2);
     padding: 15px;
@@ -299,7 +299,7 @@ select:focus, input:focus {
     border-bottom: none;
 }
 
-/* Policy Table */
+
 .policy-table {
     width: 100%;
     border-collapse: collapse;
