@@ -602,7 +602,7 @@
             });
         }
 
-        // Updating User Info
+        
         function updateUserInfo() {
             const username = document.getElementById('userSelect').value;
             if (username && users[username]) {
@@ -619,7 +619,7 @@
             }
         }
 
-        // Login Function
+        
         function login() {
             const username = document.getElementById('userSelect').value;
             const password = document.getElementById('password').value;
@@ -636,7 +636,7 @@
                 return;
             }
 
-            // Generate token
+            
             currentToken = Math.random().toString(36).substring(2, 20) + '_' + Date.now();
             currentUser = username;
 
@@ -651,14 +651,14 @@
 
             showNotification(`Welcome ${username}! Login successful`, 'success');
 
-            // Verify policies
+            
             setTimeout(() => {
                 verifyUserPolicies();
                 updateStepDisplay(3);
             }, 1000);
         }
 
-        // Verify User Policies
+       
         function verifyUserPolicies() {
             const userPolicies = policies.filter(p => p.user === currentUser || p.user === '*');
             const verifyDiv = document.getElementById('policyVerify');
@@ -681,7 +681,7 @@
             updateStepDisplay(3);
         }
 
-        // Test System Call
+       
         function testSyscall(syscallName, argument, type) {
             if (!currentUser) {
                 showNotification('Please login first!', 'error');
@@ -693,7 +693,7 @@
             const timestamp = new Date().toLocaleTimeString();
             const user = users[currentUser];
 
-            // Update stats
+            
             totalCalls++;
             if (allowed) {
                 allowedCalls++;
@@ -786,7 +786,7 @@
             document.getElementById('stepDisplay').innerText = `${step}/8`;
         }
 
-        // Generate Report
+       
         function generateReport() {
             const rate = totalCalls > 0 ? ((allowedCalls / totalCalls) * 100).toFixed(1) : 100;
             const threat = deniedCalls > 5 ? (deniedCalls > 10 ? 'HIGH' : 'MEDIUM') : 'LOW';
@@ -821,7 +821,7 @@
             showNotification('Report generated!', 'success');
         }
 
-        // Reset Demo
+        
         function resetDemo() {
             currentUser = null;
             currentToken = null;
@@ -850,7 +850,7 @@
             showNotification('Demo reset complete!', 'info');
         }
 
-        // Show Notification
+        
         function showNotification(msg, type) {
             const colors = { success: '#10b981', error: '#ef4444', info: '#3b82f6' };
             const notif = document.createElement('div');
